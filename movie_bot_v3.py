@@ -1,9 +1,10 @@
 import telebot
 from telebot import types
 import requests
+import os
 
-TELEGRAM_TOKEN = "8736298609:AAGfNDC9RR09n02eCusGgwlpJjlZ9m7tJn8"
-TMDB_TOKEN     = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlMDRiODEzNWM4NzE2OGQ0MGNhOGU5MzVkMTY1YWM1OCIsIm5iZiI6MTc3NzAyMjE1NS4wOSwic3ViIjoiNjllYjM0Y2I1OTU4YzQ5YzExYjRlMDFjIiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.c9xEr9571sMVgH-lyzpwdatPsq_v2KBF0epjLmK1LmI"
+TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
+TMDB_TOKEN     = os.environ.get("TMDB_TOKEN")
 
 bot = telebot.TeleBot(TELEGRAM_TOKEN)
 
